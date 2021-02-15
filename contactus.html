@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactus</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+        
+        input[type=text], select, textarea {
+          width: 60%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+        input[type=email], select, textarea {
+          width: 30%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+        
+        input[type=submit] {
+          background-color: red;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+          background-color:red;
+        }
+        
+        .container2 {
+          border-radius: 5px;
+          padding: 20px;
+          margin-left: 60%;
+        }
+        .container1 {
+            border-radius: 5px;
+          padding: 20px;
+        }
+        
+        </style>
+</head>
+<body>
+    <script type="email/javascript">
+        function confirmEmail() {
+            var email = document.getElementById("email").value
+            var confirmemail = document.getElementById("confirmemail").value
+            if(email != confirmemail) {
+                alert('Email Not Matching!');
+            }
+        }
+    </script>
+    <h2>Contact Us</h3>
+<div>
+    <div class="container1">
+        <p><a href="mailto:info@fissionlabs.com">info@fissionlabs.com</a></p>
+        <p><b style="font-weight: 900;">India</b><br>Plot No: 703/A Road No: 36,<br>Jubilee Hills, Hyderabad, 500033.<br>
+        <a href="tel:+91 80081 68833"> +91 80081 68833</a><br>
+        <a href="tel:+91 97010 01026"> +91 97010 01026</a> (sales inquiries only)
+        </p>
+        <p>&nbsp;</p>
+        <p><p><b style="font-weight: 900;">United State</b><br>
+            830 Stewart Dr, Suite 247 <br>
+            Sunnyvale, CA 94085 <br>
+            <a href="tel:+16505209508"> +1 650 520 9508</a>
+        </p>
+
+    </div>
+<div class="container2">
+    <h2>Drop us a Line</h2>
+  <form >
+    <label for="name">Name</label><br>
+    <input type="text" id="name" required name="name" placeholder="Enter name"><br>
+
+    <label for="email">Email</label><br>
+    <input type="email" id="email" required name="email" placeholder="Enter Email">
+    <input type="email" id="confirmemail" required name="confirmemail" placeholder="Confirm Email" onblur="confirmEmail()"><br>
+    
+
+    <label for="aoi">Area of Interest</label><br>
+    <select id="aoi" name="aoi" required style="width: 60%;">
+      <option value="Genral Inquiry">Genral Inquiry</option>
+      <option value="Scalabke Cloud Application">Scalabke Cloud Application</option>
+      <option value="Web and Mobile Application">Web and Mobile Application</option>
+      <option value="Testing Service">Testing Service</option>
+      <option value="Data Analytics">Data Analytics</option>
+      <option value="Cloud Management">Cloud Management</option>
+      <option value="Salesforce">Salesforce</option>
+      <option value="Other">Other</option>
+    </select><br>
+
+    <label for="message">Message</label><br>
+    <textarea id="message" name="subject" required placeholder="Write something.." style="height:200px;width: 100%;"></textarea><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</div>
+
+</body>
+</html>
